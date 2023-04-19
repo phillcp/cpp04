@@ -6,7 +6,7 @@
 /*   By: fheaton- <fheaton-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 16:18:04 by fheaton-          #+#    #+#             */
-/*   Updated: 2023/02/10 15:42:52 by fheaton-         ###   ########.fr       */
+/*   Updated: 2023/04/19 18:17:37 by fheaton-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ class Animal{
 		std::string type;
 	public:
 		Animal();
-		~Animal();
+		virtual ~Animal();
 		
-		void makeSound() const;
+		virtual void makeSound() const;
 		std::string getType() const;
 };
 
