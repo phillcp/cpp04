@@ -6,7 +6,7 @@
 /*   By: fheaton- <fheaton-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 16:17:40 by fheaton-          #+#    #+#             */
-/*   Updated: 2023/04/19 18:30:53 by fheaton-         ###   ########.fr       */
+/*   Updated: 2023/04/20 17:26:20 by fheaton-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ int main()
 		else
 			a[i] = new Cat();
 	}
+	std::cout << std::endl;
+
+	
 	std::cout << std::endl << "Destructor Time" << std::endl;
 	for (int i = 9; i >= 0; i--)
 	{
@@ -35,6 +38,24 @@ int main()
 		delete a[i];
 	}
 	std::cout << std::endl;
+
+	Dog basic;
+	basic.printIdeas();
+	basic.newIdea("3 e meio");
+	{
+		Dog tmp = basic;
+		tmp.printIdeas();
+	}
+	basic.newIdea("4 e meio");
+	basic.printIdeas();
+
+	std::cout << std::endl;
+
+	// ex02 example:
 	
+	// Animal b;
+	// Dog c;
+	// Cat d;
+
 	return 0;
 }

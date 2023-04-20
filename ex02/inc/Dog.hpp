@@ -6,7 +6,7 @@
 /*   By: fheaton- <fheaton-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 16:20:55 by fheaton-          #+#    #+#             */
-/*   Updated: 2023/02/10 14:36:10 by fheaton-         ###   ########.fr       */
+/*   Updated: 2023/04/20 16:47:42 by fheaton-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,12 @@ class Dog : public Animal{
 		Brain* _brain;
 	public:
 		Dog();
-		~Dog();
+		Dog(const Dog& other);
+		Dog& operator=(const Dog& other);
+		virtual ~Dog();
 
+		void newIdea(const std::string& idea);
+		void printIdeas() const;
 		void makeSound() const;
 };
 

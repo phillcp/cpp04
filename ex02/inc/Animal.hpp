@@ -6,7 +6,7 @@
 /*   By: fheaton- <fheaton-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 16:18:04 by fheaton-          #+#    #+#             */
-/*   Updated: 2023/04/19 18:30:40 by fheaton-         ###   ########.fr       */
+/*   Updated: 2023/04/20 17:23:53 by fheaton-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ class Animal{
 		std::string type;
 	public:
 		Animal();
+		Animal(const Animal& other);
+		Animal& operator=(const Animal& other);
 		virtual ~Animal();
 		
 		virtual void makeSound() const = 0;

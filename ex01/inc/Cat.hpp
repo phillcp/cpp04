@@ -6,7 +6,7 @@
 /*   By: fheaton- <fheaton-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 16:21:47 by fheaton-          #+#    #+#             */
-/*   Updated: 2023/02/10 14:36:07 by fheaton-         ###   ########.fr       */
+/*   Updated: 2023/04/20 16:48:57 by fheaton-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,12 @@ class Cat : public Animal{
 		Brain* _brain;
 	public:
 		Cat();
-		~Cat();
+		Cat(const Cat& other);
+		Cat& operator=(const Cat& other);
+		virtual ~Cat();
 
+		void newIdea(const std::string& idea);
+		void printIdeas() const;
 		void makeSound() const;
 };
 
